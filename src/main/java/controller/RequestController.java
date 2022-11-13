@@ -39,9 +39,9 @@ public class RequestController{
         
         Boolean isNew = RequestModel.isNew(game);
         
-        if(isNew == true){
+        if(isNew){
             Boolean result = RequestModel.addGame(game);
-            if(result == true){
+            if(result){
             return Response.ok("The game has been added to the database").build();
         }
             else {
