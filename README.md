@@ -3,7 +3,14 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
 
 ## Játékokról eltárolt adatok
 
-* Játék neve
-* Játék értékelése 1-5-ig
-* Játék elkezdésének időpontja
-* Játék befejezésének időpontja
+* Játék neve (title)
+* Játék értékelése 1-5-ig (rating)
+* Játék elkezdésének időpontja (startingDate)
+* Játék befejezésének időpontja (endDate)
+
+## Funkciók / Endpointok
+
+* getAllGames
+** Összes kijátszott játék kiiratása
+
+
