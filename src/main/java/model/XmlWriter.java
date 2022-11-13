@@ -27,14 +27,17 @@ public class XmlWriter {
             Element title = doc.createElement("title");
             Element rating = doc.createElement("rating");
             Element startingDate = doc.createElement("startingDate");
+            Element endDate = doc.createElement("endDate");
             
             title.setTextContent(newGame.getTitle());
             rating.setTextContent(newGame.getRating().toString());
             startingDate.setTextContent(newGame.getStartingDate().toString());
+            endDate.setTextContent(newGame.getEndDate().toString());
             
             game.appendChild(title);
             game.appendChild(rating);
             game.appendChild(startingDate);
+            game.appendChild(endDate);
             
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer t = tf.newTransformer();

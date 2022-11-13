@@ -12,7 +12,16 @@ public class RequestModel {
         try{
             RatingEnum rating = RatingEnum.valueOf(gameJSON.getString("rating"));
             LocalDate startingDate = LocalDate.parse(gameJSON.getString("startingDate"));
-            Game game = new Game(gameJSON.getString("title"), rating, startingDate);
+            
+            Game game = new Game();
+            
+            if(gameJSON.length() == 3){
+                game = new Game(gameJSON.getString("title"), rating, startingDate);
+            }
+            else {
+                LocalDate endDate = LocalDate.parse(gameJSON.getString("endDate"));
+                game = new Game(gameJSON.getString("title"), rating, startingDate, endDate);
+            }
 
             XmlWriter writer = new XmlWriter();
             writer.write(game);

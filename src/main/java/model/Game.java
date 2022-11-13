@@ -7,6 +7,7 @@ public class Game {
     private String title;
     private RatingEnum rating;
     private LocalDate startingDate;
+    private LocalDate endDate;
 
     public Game() {
     }
@@ -15,6 +16,21 @@ public class Game {
         this.title = title;
         this.rating = rating;
         this.startingDate = startingDate;
+        this.endDate = LocalDate.now();
+    }
+
+    public Game(String title, RatingEnum rating, LocalDate startingDate, LocalDate endDate) {
+        this.title = title;
+        this.rating = rating;
+        this.startingDate = startingDate;
+        
+        if(endDate.isAfter(startingDate)){
+            this.endDate = endDate;
+        }
+        else{
+            this.endDate = LocalDate.now();
+        }
+        
     }
 
     public String getTitle() {
@@ -28,14 +44,9 @@ public class Game {
     public LocalDate getStartingDate() {
         return startingDate;
     }
-
-    public void setRating(RatingEnum rating) {
-        this.rating = rating;
-    }
-
-    public void setStartingDate(LocalDate startingDate) {
-        this.startingDate = startingDate;
-    }
     
+    public LocalDate getEndDate() {
+        return endDate;
+    }  
     
 }

@@ -30,10 +30,12 @@ public class XmlReader {
                     String title = el.getElementsByTagName("title").item(0).getTextContent();
                     String rating = el.getElementsByTagName("rating").item(0).getTextContent();
                     String startingDate = el.getElementsByTagName("startingDate").item(0).getTextContent();
+                    String endDate = el.getElementsByTagName("endDate").item(0).getTextContent();
                     
                     game.put("title", title);
                     game.put("rating", rating);
                     game.put("startingDate", startingDate);
+                    game.put("endDate", endDate);
                 
                 games.put(game);
             }

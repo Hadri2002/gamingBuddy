@@ -29,7 +29,8 @@ public class GamesView {
         gameToString += "TITLE: " + game.getString("title") + ",\n";
         gameToString += "RATING: " + game.getString("rating") + " (" +
                         RatingEnum.valueOf(game.getString("rating")).score + "),\n";
-        gameToString += "STARTING DATE: " + game.getString("startingDate") + ";\n\n";
+        gameToString += "STARTING DATE: " + game.getString("startingDate") + ",\n";
+        gameToString += "END DATE: " + game.getString("endDate") + ";\n\n";
         
         return gameToString;
     }
