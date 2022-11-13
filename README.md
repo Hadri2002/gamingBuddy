@@ -15,9 +15,9 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
 * getGameRating - GET
     * Query paraméterként szükséges a kívánt játék címének a megadása
     * Visszaadja a keresett játék értékelését (amennyiben a játékot már eltároltuk)
-'''example
+```example
 /gamingbuddy/application/getGameRating?game=Oxenfree
-'''
+```
 * addGame - POST
     * Új játék hozzáadása az xml adatbázisunkhoz
     * JSON-t fogad el bemeneti paraméterként
