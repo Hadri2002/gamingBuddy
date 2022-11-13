@@ -10,9 +10,18 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
 
 ## Funkciók / Endpointok
 
-* getAllGames
- *  
-* getGameRating
-* addGame
+* getAllGames - GET
+    *  Kiiratja az eddigi összes letárolt játék minden adatát
+* getGameRating - GET
+    * Query paraméterként szükséges a kívánt játék címének a megadása
+    * Visszaadja a keresett játék értékelését (amennyiben a játékot már eltároltuk)
+'''example
+/gamingbuddy/application/getGameRating?game=Oxenfree
+'''
+* addGame - POST
+    * Új játék hozzáadása az xml adatbázisunkhoz
+    * JSON-t fogad el bemeneti paraméterként
+    * Amennyiben ilyen néven már létezik játék, nem adja hozzá megint az adatbázishoz
+    * Ha nem adunk meg befejezési dátumot, vagy a kezdet előtti dátumot adunk meg, akkor automatikusan a mai dátumot állítja be
 
 
