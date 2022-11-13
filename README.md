@@ -11,6 +11,6 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
 ## Funkciók / Endpointok
 
 * getAllGames
-** Összes kijátszott játék kiiratása
+  ** Összes kijátszott játék kiiratása
 
 
