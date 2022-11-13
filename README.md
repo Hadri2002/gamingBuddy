@@ -4,9 +4,16 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
 ## Játékokról eltárolt adatok
 
 * Játék neve (title)
-* Játék értékelése 1-5-ig (rating)
+* Játék értékelése 1-5-ig, illetve szavakkal (rating)
 * Játék elkezdésének időpontja (startingDate)
 * Játék befejezésének időpontja (endDate)
+
+## RatingEnum
+* Awful - 1
+* Bad - 2
+* Mid - 3
+* Good - 4
+* Amazing - 5
 
 ## Funkciók / Endpointok
 
@@ -23,5 +30,13 @@ Webes program, ami segítségével el tudod tárolni a már általad befejezett 
     * JSON-t fogad el bemeneti paraméterként
     * Amennyiben ilyen néven már létezik játék, nem adja hozzá megint az adatbázishoz
     * Ha nem adunk meg befejezési dátumot, vagy a kezdet előtti dátumot adunk meg, akkor automatikusan a mai dátumot állítja be
+```example
+{
+    "title" : "Red Dead Redemption",
+    "rating" : "Amazing",
+    "startingDate": "2020-03-01",
+    "endDate": "2022-05-06"
+}
+```
 
 
