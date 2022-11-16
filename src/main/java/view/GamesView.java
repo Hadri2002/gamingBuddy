@@ -16,8 +16,6 @@ public class GamesView {
                 JSONObject game = games.getJSONObject(i);
                 gamesToString += showGame(game);
             }
-            
-            System.out.println(gamesToString);
         }
         
         return gamesToString;

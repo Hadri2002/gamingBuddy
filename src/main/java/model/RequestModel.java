@@ -12,7 +12,6 @@ public class RequestModel {
         try{
             int ratingInt = gameJSON.getInt("rating");
             RatingEnum rating;
-            System.out.println(ratingInt);
             switch (ratingInt) {
                 case 1: 
                     rating = RatingEnum.Awful;
@@ -32,7 +31,6 @@ public class RequestModel {
                 default: return false;
                     
             }
-             //= RatingEnum.valueOf(gameJSON.getString("rating"));
             LocalDate startingDate = LocalDate.parse(gameJSON.getString("startingDate"));
             
             Game game;
@@ -57,7 +55,7 @@ public class RequestModel {
     
     
     public static Boolean isNew(JSONObject gameJSON) {
-        Boolean result = true; //it's true if it's new, false if it already exists
+        boolean result = true; //it's true if it's new, false if it already exists
         
         XmlReader reader = new XmlReader();
         JSONArray games = reader.read();
