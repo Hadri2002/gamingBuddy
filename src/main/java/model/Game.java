@@ -9,6 +9,8 @@ public class Game {
     private LocalDate startingDate;
     private LocalDate endDate;
 
+    /* ---- CONSTRUCTORS ---- */
+    
     public Game() {
     }
 
@@ -28,10 +30,12 @@ public class Game {
             this.endDate = endDate;
         }
         else{
-            this.endDate = LocalDate.now();
+            this.endDate = LocalDate.now(); //if the date given is before the starting date, it automatically sets the finish to today
         }
         
     }
+    
+    /* ---- GETTERS ---- */
 
     public String getTitle() {
         return title;

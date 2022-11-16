@@ -13,6 +13,7 @@ import model.RequestModel;
 import model.XmlReader;
 import view.GamesView;
 
+/* ---- REQUESTS ---- */
 
 @Path("application")
 public class RequestController{
@@ -50,7 +51,4 @@ public class RequestController{
         }
         
         return Response.ok("You have already added that game to the database!").build();
-}
-    
-    
-}
+    }}

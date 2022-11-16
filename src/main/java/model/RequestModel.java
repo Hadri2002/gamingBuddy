@@ -13,7 +13,7 @@ public class RequestModel {
             RatingEnum rating = RatingEnum.valueOf(gameJSON.getString("rating"));
             LocalDate startingDate = LocalDate.parse(gameJSON.getString("startingDate"));
             
-            Game game = new Game();
+            Game game;
             
             if(gameJSON.length() == 3){
                 game = new Game(gameJSON.getString("title"), rating, startingDate);
@@ -27,7 +27,7 @@ public class RequestModel {
             writer.write(game);
         }
         catch(Exception ex){
-            ex.getMessage();
+            System.out.println(ex.getMessage());
             return false;
         }
             return true;

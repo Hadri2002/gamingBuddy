@@ -7,6 +7,5 @@ public enum RatingEnum {
     
     private RatingEnum (int score){
         this.score = score;
-    }
-    
+    }  
 }
