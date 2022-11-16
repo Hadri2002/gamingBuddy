@@ -10,7 +10,29 @@ public class RequestModel {
         //get the data in the JSONObject and add it to the XML
         
         try{
-            RatingEnum rating = RatingEnum.valueOf(gameJSON.getString("rating"));
+            int ratingInt = gameJSON.getInt("rating");
+            RatingEnum rating;
+            System.out.println(ratingInt);
+            switch (ratingInt) {
+                case 1: 
+                    rating = RatingEnum.Awful;
+                    break;
+                case 2:
+                    rating = RatingEnum.Bad;
+                    break;
+                case 3:
+                    rating = RatingEnum.Mid;
+                    break;
+                case 4:
+                    rating = RatingEnum.Good;
+                    break;
+                case 5:
+                    rating = RatingEnum.Amazing;
+                    break;
+                default: return false;
+                    
+            }
+             //= RatingEnum.valueOf(gameJSON.getString("rating"));
             LocalDate startingDate = LocalDate.parse(gameJSON.getString("startingDate"));
             
             Game game;

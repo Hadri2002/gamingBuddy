@@ -46,7 +46,7 @@ public class RequestController{
             return Response.ok("The game has been added to the database").build();
         }
             else {
-                return Response.ok("You didn't enter all the necessary parameters to the request's body!").build();
+                return Response.ok("You didn't enter all the necessary parameters to the request's body or used an impossible rating!").build();
             }
         }
         
